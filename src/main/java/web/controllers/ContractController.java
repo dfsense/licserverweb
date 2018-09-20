@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import web.models.Contract;
 import web.services.ContractService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -17,7 +18,9 @@ public class ContractController {
     @GetMapping("/contracts")
     public @ResponseBody
     String getContracts(){
-        contractService.findAll();
+
+        List<Contract> list = contractService.findAll();
+
         return "That's OK!";
     }
 }

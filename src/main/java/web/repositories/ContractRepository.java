@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import web.models.Contract;
 
 @Repository
-public interface ContractRepository extends CrudRepository<Contract, Long> {
+public interface ContractRepository extends JpaRepository<Contract, Integer> {
 }

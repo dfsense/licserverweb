@@ -13,17 +13,12 @@ import java.util.Arrays;
 import java.util.List;
 
 @Service
-@Repository
-@Transactional
 public class ContractService {
 
     @Autowired
     private ContractRepository contractRepository;
 
     public List<Contract> findAll() {
-        ArrayList<Contract> list = new ArrayList<>();
-        list.add(new Contract());
-        list.add(new Contract());
-        return list;
+        return contractRepository.findAll();
     }
 }
