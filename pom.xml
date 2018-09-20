@@ -10,7 +10,6 @@
     <packaging>war</packaging>
 
     <name>lic-server Maven Webapp</name>
-    <!-- FIXME change it to the project's website -->
     <url>http://www.lic-server.com</url>
 
     <properties>
@@ -57,6 +56,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.5</version>
+        </dependency>
 
     </dependencies>
 
@@ -86,18 +91,18 @@
                     <version>3.2.0</version>
                     <configuration>
                         <archive>
-                            <manifest>
+                            <!--<manifest>
                                 <addClasspath>true</addClasspath>
                                 <classpathPrefix>lib/</classpathPrefix>
-                            </manifest>
+                            </manifest>-->
                         </archive>
-                        <webResources>
+                        <!--<webResources>
                             <resource>
-                                <!-- this is relative to the pom.xml directory -->
+                                &lt;!&ndash; this is relative to the pom.xml directory &ndash;&gt;
                                 <directory>${project.basedir}/src/main/resources
                                 </directory>
                             </resource>
-                        </webResources>
+                        </webResources>-->
                         <warName>lic-server</warName>
                     </configuration>
                 </plugin>
