@@ -12,8 +12,8 @@ public class Contract {
     @Id
     @Column(name = "id_contract", unique = true, nullable = false, updatable = false)
     @GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "contract_generator")
-    @SequenceGenerator(name = "contract_generator", schema = "licsrv", sequenceName = "contracts_id_contract_seq")
-    private Integer idContract;
+    @SequenceGenerator(name = "contract_generator", schema = "licsrv", sequenceName = "contracts_id_contract_seq", allocationSize = 1, initialValue = 1)
+    private Integer id;
 
     @Column(name = "number_contract", length = 100, nullable = false, unique = true)
     private String contract;
