@@ -5,15 +5,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import web.models.Contract;
-import web.services.ContractService;
+import web.services.impl.ContractServiceImpl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class ContractController {
     @Autowired
-    private ContractService contractService;
+    private ContractServiceImpl contractService;
 
     @GetMapping("/contracts")
     public @ResponseBody
